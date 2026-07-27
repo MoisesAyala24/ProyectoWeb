@@ -1,0 +1,55 @@
+ {% extends 'layout.html' %}
+
+   {% block content %}
+
+<div class="modal-header">
+    <h5 class="modal-title">
+        Registro de Usuario
+    </h5>
+
+    <button type="button"
+            class="btn-close"
+            data-bs-dismiss="modal">
+    </button>
+</div>
+
+<div class="modal-body">
+
+    <form action="/registrar-usuario" method="POST">
+
+        <div class="mb-3">
+            <label>Nombre</label>
+            <input type="text"
+                   name="nombre"
+                   class="form-control"
+                   required>
+        </div>
+
+        <div class="mb-3">
+            <label>Correo</label>
+            <input type="email"
+                   name="correo"
+                   class="form-control"
+                   required>
+        </div>
+
+        <div class="mb-3">
+            <label>Contraseña</label>
+            <input type="password"
+                   name="password"
+                   class="form-control"
+                   required>
+        </div>
+
+        <button type="submit"
+                class="btn btn-success w-100">
+            Registrarse
+        </button>
+
+    </form>
+
+</div>
+
+ </div>
+ </div>
+  {% endblock %}

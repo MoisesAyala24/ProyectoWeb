@@ -1,0 +1,55 @@
+    {% extends 'layout.html' %}
+
+    {% block content %}
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 12;">
+    <h1>SDM</h1>
+    <button class="btn btn-success mb-2" onclick="jsEnviar()">SALUDOS</button>
+    </div>
+<div id="carouselExample" class="carousel slide">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/caballero.png') }}" class="d-block w-25 mx-auto" alt="Foto 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/maga.png') }}" class="d-block w-25 mx-auto" alt="Foto 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/inge.png') }}" class="d-block w-25 mx-auto" alt="Foto 3">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+
+        <div class="card bg-secondary text-white p-3" style="max-width: 500px;">
+
+            <h3 class="text-center">Soul Knight</h3>
+
+            <p class="mb-0">
+                Soul Knight es un juego de acción tipo roguelike donde exploras mazmorras,
+                recolectas armas aleatorias y luchas contra enemigos en tiempo real.
+                Cada partida es diferente, con habilidades únicas y desafíos constantes.
+            </p>
+
+        </div>
+
+    </div>
+
+    {% endblock %}

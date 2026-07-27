@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+            Perfil de Usuario
+        </div>
+
+        <div class="card-body">
+
+            <h4>Bienvenido {{ user[1] }}</h4>
+
+            <p><strong>ID:</strong> {{ user[0] }}</p>
+            <p><strong>Nombre:</strong> {{ user[1] }}</p>
+            <p><strong>Correo:</strong> {{ user[2] }}</p>
+
+            <hr>
+
+
+            <h5>Información de sesión</h5>
+
+            <p><strong>Token:</strong></p>
+            <p class="text-break">{{ session['token'] }}</p>
+            <p><strong>Tiempo de sesión:</strong> 5 minutos por inactividad</p>
+            <a href="/logout" class="btn btn-danger">Cerrar sesion</a>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
